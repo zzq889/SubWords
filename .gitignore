@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # osx noise
 .DS_Store
 profile
@@ -17,3 +18,32 @@ xcuserdata
 # svn & cvs
 .svn
 CVS
+=======
+*.py[co]
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+
+#Translations
+*.mo
+
+#Mr Developer
+.mr.developer.cfg
+>>>>>>> c45555d5ba7e06a650b4fc7c81a4bd2de2e7f5ec
