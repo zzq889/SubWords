@@ -1,24 +1,7 @@
-<<<<<<< HEAD
 # osx noise
 .DS_Store
 profile
 
-# xcode noise
-build/*
-*.mode1
-*.mode1v3
-*.mode2v3
-*.perspective
-*.perspectivev3
-*.pbxuser
-*.xcworkspace
-xcuserdata
-.idea
-
-# svn & cvs
-.svn
-CVS
-=======
 *.py[co]
 
 # Packages
@@ -33,6 +16,7 @@ var
 sdist
 develop-eggs
 .installed.cfg
+.idea
 
 # Installer logs
 pip-log.txt
@@ -46,4 +30,3 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
->>>>>>> c45555d5ba7e06a650b4fc7c81a4bd2de2e7f5ec
