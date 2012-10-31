@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #_*_ encoding:utf-8 _*_
 
-import sys
+import sys, getopt
 
 class SubWords:
     def __init__(self):
@@ -69,12 +69,13 @@ class SubWords:
 if __name__ == '__main__':
     words = SubWords()
     words.readDict()
-    if len(sys.argv) == 3:
-        words.searchQuery(sys.argv[0], sys.argv[1], sys.argv[2])
-    elif len(sys.argv) == 2:
-        words.searchQuery(sys.argv[0], sys.argv[1])
-    elif len(sys.argv) == 1:
-        words.searchQuery(sys.argv[0])
+    argv = sys.argv[1:]
+    if len(argv) == 3:
+        words.searchQuery(argv[0], argv[1], argv[2])
+    elif len(argv) == 2:
+        words.searchQuery(argv[0], argv[1])
+    elif len(argv) == 1:
+        words.searchQuery(argv[0])
 
     r = words.result
     for w in r:
