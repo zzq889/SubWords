@@ -1,6 +1,8 @@
 #!/usr/bin/python
 #_*_ encoding:utf-8 _*_
 
+import sys
+
 class SubWords:
     def __init__(self):
         self.dict = []
@@ -67,7 +69,13 @@ class SubWords:
 if __name__ == '__main__':
     words = SubWords()
     words.readDict()
-    words.searchQuery('tirvbjfboyoeokmakmgdaetrp', 'tobj', '')
+    if len(sys.argv) == 3:
+        words.searchQuery(sys.argv[0], sys.argv[1], sys.argv[2])
+    elif len(sys.argv) == 2:
+        words.searchQuery(sys.argv[0], sys.argv[1])
+    elif len(sys.argv) == 1:
+        words.searchQuery(sys.argv[0])
+
     r = words.result
     for w in r:
         print(w, words.wordPriority(w))
