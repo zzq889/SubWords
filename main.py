@@ -29,7 +29,7 @@ class SubWords:
 
         if prior:
             self.priorVocabs = list(prior)
-            self.result = sorted(self.result, key=self.wordPriority)
+            self.result = sorted(self.result, key=lambda k:(self.wordPriority(k), len(k)))
         else:
             self.result = sorted(self.result, key=len)
 
@@ -67,7 +67,7 @@ class SubWords:
 if __name__ == '__main__':
     words = SubWords()
     words.readDict()
-    words.searchQuery('uebnczgdqnhmlcyziwzxbdhjs', 'bzgdqnmlcyziwzxbdhj', '')
+    words.searchQuery('tirvbjfboyoeokmakmgdaetrp', 'tobj', '')
     r = words.result
     for w in r:
-        print(w)
+        print(w, words.wordPriority(w))
